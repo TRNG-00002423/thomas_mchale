@@ -1,0 +1,46 @@
+classDiagram
+    class TestCase {
+        %% TODO: Add class attributes
+        + total_created : int
+        %% TODO: Add instance attributes
+        + name : string
+        + decription : string
+        + priority : string
+        + tags: list
+        %% TODO: Add methods
+        + __init__ (self, name, description, priority="medium", tags=None)
+        + run() : bool
+        + from_dict(cls, data) : TestCase
+        + is_valid_name(name) : bool
+    }
+
+    class TestResult {
+        %% TODO: Add attributes
+        + test_name : string
+        + status : string
+        + duration_ms : float
+        + error_message : string
+        %% TODO: Add methods
+        + __init__ (self, test_name, status, duration_ms, error_message)
+        + summary(self) : string
+    }
+
+    class TestSuite {
+        %% TODO: Add attributes
+        + name : string
+        + tests : list
+        %% TODO: Add methods
+        + __init__ (self, name, tests=None)
+        + add_test(self, test)
+        + remove_test(self, name)
+        + get_by_priority(self, priority) : list
+        + count(self) : int
+    }
+
+    class TestRunner {
+        %% TODO: Add methods
+        + run(self, suite) : list
+        + summary(self, results)
+    }
+
+    %% TODO: Define relationships between classes

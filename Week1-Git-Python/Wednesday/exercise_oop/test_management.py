@@ -57,7 +57,7 @@ class TestResult:
 
     def summary(self):
         """Return a one-line summary like: '✅ test_login (120ms)'"""
-        return "{self.stauts} {self.test_name} ({self.duration})"
+        return f"{self.status} {self.test_name} ({self.duration_ms})"
 
 class TestSuite:
     """A collection of test cases.
@@ -145,7 +145,15 @@ if __name__ == "__main__":
     
     testSuite = TestSuite("suite_name", [test1, test2, test3, test4, test5, test6])
 
-    testSuite.get_by_priority("high")
+    high_test_list = testSuite.get_by_priority("high")
+    
+    for test in high_test_list:
+        print(test.name)
+    
+    print()
+    runner = TestRunner()
+    result_of_run = runner.run(testSuite)
+    runner.summary(result_of_run)
 
 
 
