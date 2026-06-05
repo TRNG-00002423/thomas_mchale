@@ -108,24 +108,25 @@ section("Task 4: reduce()")
 
 # TODO 4a: Total duration of ALL tests (in ms).
 # Expected: 15560
-total_duration = None  # TODO — use reduce() with initializer=0
+total_duration = reduce(lambda a,x: x['duration_ms'] + a, test_results, 0)
 
 # TODO 4b: Total duration of FAILED tests only.
 # Hint: chain filter() before reduce().
-total_fail_duration = None  # TODO
+total_fail_duration = reduce(lambda a,x: x['duration_ms'] + a, list(filter(lambda x: x['status'] == "fail", test_results)), 0)
 
 # TODO 4c: Find the name of the test with the LONGEST name (by character count).
-longest_name = None  # TODO — reduce() over names
+longest_test_dict = reduce(lambda a, x: x if len(x["name"]) > len(a["name"]) else a, test_results)
+longest_name = longest_test_dict["name"]
 
 # TODO 4d: Build a module summary dict counting tests per module.
 # Expected: {'auth': 3, 'search': 3, 'checkout': 3, 'profile': 3}
-module_counts = None  # TODO — reduce() with a dict accumulator and initializer={}
+module_counts = reduce(lambda a, x: {**a, x["module"]: a.get(x["module"], 0) + 1}, test_results, {})
 
 # Uncomment to print:
-# print(f"  Total duration:       {total_duration}ms")
-# print(f"  Total fail duration:  {total_fail_duration}ms")
-# print(f"  Longest name:         {longest_name}")
-# print(f"  Module counts:        {module_counts}")
+print(f"  Total duration:       {total_duration}ms")
+print(f"  Total fail duration:  {total_fail_duration}ms")
+print(f"  Longest name:         {longest_name}")
+print(f"  Module counts:        {module_counts}")
 
 
 # ── Task 5: zip() ─────────────────────────────────────────────────────────────
