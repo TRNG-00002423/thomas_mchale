@@ -12,27 +12,44 @@ def main():
     # - Total test cases (convert to int)
     # - Passed tests (convert to int)
     # - Total execution time in seconds (convert to float)
-    total_tests = None
-    passed_tests = None
-    total_time = None
+    total_tests = int(input("Enter total test cases: "))
+    passed_tests = int(input("Enter passed tests: "))
+    total_time = float(input("Enter total execution time (seconds): "))
 
     # TODO 2: Calculate metrics
     # - failed tests
     # - pass rate (as percentage)
     # - fail rate (as percentage)
     # - average time per test
-    failed_tests = None
-    pass_rate = None
-    fail_rate = None
-    avg_time = None
+    failed_tests = total_tests - passed_tests
+    pass_rate = (passed_tests/total_tests) * 100
+    fail_rate = (failed_tests/total_tests) * 100
+    avg_time = total_time/total_tests
 
     # TODO 3: Print the results summary using f-strings
     # Use the format shown in the README
+    print(f"Total Tests:     {total_tests}")
+    print(f"Passed:          {passed_tests}")
+    print(f"Failed:           {failed_tests}")
+    print(f"Pass Rate:       {pass_rate}%")
+    print(f"Fail Rate:        {fail_rate}%")
+    print(f"Avg Time/Test:   {avg_time}s")
+    print(f"Total Time:      {total_time}s")
 
     # TODO 4: Determine and print the verdict
     # >= 95% → RELEASE APPROVED
     # >= 80% → CONDITIONAL RELEASE
     # else   → RELEASE BLOCKED
+    verdict = ""
+    if (pass_rate >= 95):
+        verdict = "RELEASE APPROVED"
+    elif (pass_rate >= 80):
+        verdict = "CONDITIONAL RELEASE"
+    else:
+        verdict = "RELEASE BLOCKED"
+    
+    print()
+    print(f"Verdict: {verdict}")
 
 
 if __name__ == "__main__":
