@@ -138,6 +138,8 @@ actual_codes   = [200, 500, 201, 403]
 
 # TODO 5a: Compare expected vs actual codes. Print ✅ or ❌ for each endpoint.
 # Format: "✅ /login: expected=200, actual=200"
+for name, expected, acutal in zip(endpoints, expected_codes, actual_codes):
+    print(f"{} /{name} ")
 
 # TODO 5b: Unzip test_results into 4 parallel tuples:
 #   (names, modules, durations, statuses)
