@@ -138,16 +138,23 @@ actual_codes   = [200, 500, 201, 403]
 
 # TODO 5a: Compare expected vs actual codes. Print ✅ or ❌ for each endpoint.
 # Format: "✅ /login: expected=200, actual=200"
-for name, expected, acutal in zip(endpoints, expected_codes, actual_codes):
-    print(f"{} /{name} ")
+for name, expected, actual in zip(endpoints, expected_codes, actual_codes):
+    symbol = ""
+    if expected == actual:
+        symbol = "✅"
+    else:
+        symbol = "❌"
+    print(f"{symbol} {name} exptected={expected} actual={actual}")
 
 # TODO 5b: Unzip test_results into 4 parallel tuples:
 #   (names, modules, durations, statuses)
 # Hint: zip(*[[r['name'], r['module'], ...] for r in test_results])
+names, modules, durations, statuses = zip(*[[r['name'], r['module'], r['duration_ms'], r['status']] for r in test_results])
 
 # TODO 5c: Build a dict mapping test names to duration_ms using zip().
 # Expected: {'test_login': 1200, 'test_register': 2100, ...}
-name_to_duration = None  # TODO
+name_to_duration = dict(zip(list(map(lambda x: x["name"],test_results)),zip(list(map(lambda x: x["duration_ms"],test_results)))))
+print(name_to_duration)
 
 
 # ── Stretch: Full Pipeline ────────────────────────────────────────────────────
