@@ -1,0 +1,5 @@
+rows=5
+grand_total=[25.0, 60.0, 5.0, 99.99, 75.0]
+average_line_revenue=52.998000000000005
+top_sku=C300
+top_line_revenue=99.99
