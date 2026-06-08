@@ -1,0 +1,64 @@
+2026-06-07 23:22:31,129 | ERROR    | qa_framework:55 | ERROR: test_login failed!
+2026-06-07 23:22:31,150 | WARNING  | qa_framework:86 | WARNING: Pass rate below 80%!
+2026-06-07 23:22:31,160 | ERROR    | qa_framework:55 | ERROR: test_checkout failed!
+2026-06-07 23:22:31,171 | ERROR    | qa_framework:55 | ERROR: test_payment failed!
+2026-06-07 23:22:31,192 | ERROR    | qa_framework:55 | ERROR: test_settings failed!
+2026-06-07 23:22:31,202 | WARNING  | qa_framework:86 | WARNING: Pass rate below 80%!
+2026-06-07 23:22:31,202 | CRITICAL | qa_framework:88 | CRITICAL: More than half the tests failed!
+2026-06-07 23:22:31,223 | ERROR    | qa_framework:55 | ERROR: test_api_response failed!
+2026-06-07 23:22:31,223 | WARNING  | qa_framework:86 | WARNING: Pass rate below 80%!
+2026-06-07 23:25:14,277 | INFO     | qa_framework:96 | QA Test Framework v1.0
+2026-06-07 23:25:14,277 | INFO     | qa_framework:97 | Initializing...
+2026-06-07 23:25:14,277 | INFO     | qa_framework:66 | 
+==================================================
+2026-06-07 23:25:14,277 | INFO     | qa_framework:67 | Starting suite: Smoke Tests
+2026-06-07 23:25:14,277 | INFO     | qa_framework:68 | Tests to run: 3
+2026-06-07 23:25:14,278 | INFO     | qa_framework:69 | ==================================================
+
+2026-06-07 23:25:14,278 | ERROR    | qa_framework:116 | Suite Smoke Tests crashed: Logger._log() got an unexpected keyword argument 'end'
+Traceback (most recent call last):
+  File "C:\Users\Thomas\Training\thomas_mchale\Week1-Git-Python\Friday\Exercises\legacy_runner.py", line 112, in main
+    result = run_suite(suite_name, tests, logger)
+  File "C:\Users\Thomas\Training\thomas_mchale\Week1-Git-Python\Friday\Exercises\legacy_runner.py", line 74, in run_suite
+    logger.info(f"[{i}/{len(test_names)}]", end=" ")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thomas\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1522, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Logger._log() got an unexpected keyword argument 'end'
+2026-06-07 23:25:14,284 | INFO     | qa_framework:66 | 
+==================================================
+2026-06-07 23:25:14,284 | INFO     | qa_framework:67 | Starting suite: Regression
+2026-06-07 23:25:14,284 | INFO     | qa_framework:68 | Tests to run: 5
+2026-06-07 23:25:14,284 | INFO     | qa_framework:69 | ==================================================
+
+2026-06-07 23:25:14,284 | ERROR    | qa_framework:116 | Suite Regression crashed: Logger._log() got an unexpected keyword argument 'end'
+Traceback (most recent call last):
+  File "C:\Users\Thomas\Training\thomas_mchale\Week1-Git-Python\Friday\Exercises\legacy_runner.py", line 112, in main
+    result = run_suite(suite_name, tests, logger)
+  File "C:\Users\Thomas\Training\thomas_mchale\Week1-Git-Python\Friday\Exercises\legacy_runner.py", line 74, in run_suite
+    logger.info(f"[{i}/{len(test_names)}]", end=" ")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thomas\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1522, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Logger._log() got an unexpected keyword argument 'end'
+2026-06-07 23:25:14,285 | INFO     | qa_framework:66 | 
+==================================================
+2026-06-07 23:25:14,285 | INFO     | qa_framework:67 | Starting suite: Performance
+2026-06-07 23:25:14,285 | INFO     | qa_framework:68 | Tests to run: 2
+2026-06-07 23:25:14,285 | INFO     | qa_framework:69 | ==================================================
+
+2026-06-07 23:25:14,285 | ERROR    | qa_framework:116 | Suite Performance crashed: Logger._log() got an unexpected keyword argument 'end'
+Traceback (most recent call last):
+  File "C:\Users\Thomas\Training\thomas_mchale\Week1-Git-Python\Friday\Exercises\legacy_runner.py", line 112, in main
+    result = run_suite(suite_name, tests, logger)
+  File "C:\Users\Thomas\Training\thomas_mchale\Week1-Git-Python\Friday\Exercises\legacy_runner.py", line 74, in run_suite
+    logger.info(f"[{i}/{len(test_names)}]", end=" ")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thomas\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1522, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Logger._log() got an unexpected keyword argument 'end'
+2026-06-07 23:25:14,286 | INFO     | qa_framework:119 | 
+Final: 0/0 overall
