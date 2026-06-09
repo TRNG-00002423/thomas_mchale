@@ -62,15 +62,14 @@ def put_student(id):
             return modified_student
     return jsonify({"error": "Student does not exist"}), 404
 
-@app.route("/students/<int:id>", methods="DELETE")
+@app.route("/students/<int:id>", methods=['DELETE'])
 def del_student(id):
     global students
     for my_dict in students:
         if my_dict["id"] == id:
             students = [my_dict for my_dict in students if my_dict["id"] != id]
-            return jsonify({"message": f"Student {id} deleted successfully"}), 200
+            return jsonify({"message": f"Student deleted successfully"}), 200
     return jsonify({"error": "Student does not exist"}), 404
-
 
 if __name__ == "__main__":
     app.run(debug=True)
