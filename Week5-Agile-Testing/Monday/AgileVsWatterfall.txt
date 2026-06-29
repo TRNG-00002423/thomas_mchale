@@ -1,0 +1,14 @@
+For Phase A and B I would reccomend using a Agile/Scrum life cycle backed by a Kanban visual board
+I would use this structure for the following reasons:
+    It is the industry standard
+    Due to the report layouts expected to change oftend for the first 9-12 months it would be much more
+        efficient to have a flexable and adaptable structure like agile instead of waterfall.
+    Organizing the workload into sprints with scrum would offer the easiest transition as they already sit together daily
+    They would spend this time updating each other about pieces that they are going to work on next and any current blockers
+    And finally the Kanban board would offer the perfect visual element to organize who is working on what and the status of any current ticket
+
+For risks the main one is there is no concrete deadline with this method but it is important to note with this layout often times the work is
+    done much fast than when compaired to more concrete alternatives.
+
+This plan would allow for a shift left for testing to happen much earlier in the devopment precoess.
+    Idealy testing would happen week one of devlopent with robust automated tests that adapt as the product grows.
