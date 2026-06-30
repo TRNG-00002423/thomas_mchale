@@ -1,0 +1,5 @@
+| ID | TITLE | PRECONDITIONS | STEPS | EXPECTED RESULT | PRIORITY | TRACEABILITY |
+| TC-BT-001 | Max 10 wishlists | User is able to create wishlists | Attempt to create 11 wishlists | Warning pops up preventing the 11th wishlist from being created | P2 | AC1
+| TC-BT-002 | Wishlist names < 1 characters not allowed | User is able to create a new wishlist | User clicks create new wishlist and types in a wishlist with no characters | app throws a warning preventing the user from creating the wishlist | P2 | AC1
+| TC-BT-003 | Wishlist names > 40 characters not allowed | User is able to create a new wishlist | User clicks create new wishlist and types in a wishlist with > 40 characters | app throws a warning preventing the user from creating the wishlist | P2 | AC1
+| TC-BT-004 | Wishlist names > 0 and < 40 successfully creates wishlist | User is able to create a wishlist | User clicks on create new wishlist and types in a name > 0 and < 40 characters | the new wishlist should be successfully created | P2 | AC1
